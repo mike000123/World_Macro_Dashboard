@@ -34,6 +34,12 @@ if not exist ".git" (
 )
 echo.
 
+if exist "macro-dashboard.html" (
+    echo Refreshing index.html for GitHub Pages...
+    copy /Y "macro-dashboard.html" "index.html" >nul
+)
+echo.
+
 echo Staging files...
 git add -A
 
