@@ -15,7 +15,7 @@ echo.
 where git >nul 2>nul
 if errorlevel 1 (
     echo [ERROR] Git was not found on this computer.
-    echo Download it from: https://git-scm.com/download/win
+    echo Download it from git-scm.com/download/win
     pause
     exit /b 1
 )
@@ -28,7 +28,7 @@ if not exist ".git" (
 ) else (
     git remote get-url origin >nul 2>nul
     if errorlevel 1 (
-        echo Adding remote "origin"...
+        echo Adding remote origin...
         git remote add origin "%REPO_URL%"
     )
 )
@@ -49,13 +49,14 @@ if errorlevel 1 (
     echo.
 )
 
-echo Pushing to GitHub (%REPO_URL%)...
+echo Pushing to GitHub...
+echo %REPO_URL%
 git push -u origin %BRANCH%
 
 if errorlevel 1 (
     echo.
-    echo Direct push failed - the remote repository probably already has
-    echo some content (e.g. a README created on GitHub). Trying to sync...
+    echo Direct push failed. The remote repository probably already has
+    echo some content, such as a README created on GitHub. Trying to sync...
     git pull origin %BRANCH% --allow-unrelated-histories --no-edit
     if errorlevel 1 (
         echo.
@@ -69,9 +70,9 @@ if errorlevel 1 (
     if errorlevel 1 (
         echo.
         echo [ERROR] Push failed again. Scroll up in this window and read
-        echo the exact error text from git above this message - that is
-        echo what tells us what is wrong (login/auth issue, wrong repo
-        echo name, network problem, etc.).
+        echo the exact error text from git above this message. That line
+        echo tells us what is wrong - a login problem, wrong repo name,
+        echo or a network issue.
         pause
         exit /b 1
     )
@@ -80,6 +81,6 @@ if errorlevel 1 (
 echo.
 echo ================================================
 echo   Done! Check your changes at:
-echo   https://github.com/mike000123/World_Macro_Dashboard
+echo   github.com/mike000123/World_Macro_Dashboard
 echo ================================================
 pause
