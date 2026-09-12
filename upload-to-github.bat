@@ -1,0 +1,85 @@
+@echo off
+setlocal enabledelayedexpansion
+
+set "REPO_URL=https://github.com/mike000123/World_Macro_Dashboard.git"
+set "BRANCH=main"
+set "REPO_DIR=%~dp0"
+
+cd /d "%REPO_DIR%"
+echo ================================================
+echo   Uploading dashboard to GitHub
+echo   Folder: %REPO_DIR%
+echo ================================================
+echo.
+
+where git >nul 2>nul
+if errorlevel 1 (
+    echo [ERROR] Git was not found on this computer.
+    echo Download it from: https://git-scm.com/download/win
+    pause
+    exit /b 1
+)
+
+if not exist ".git" (
+    echo No git repository here yet - initializing...
+    git init
+    git branch -M %BRANCH%
+    git remote add origin "%REPO_URL%"
+) else (
+    git remote get-url origin >nul 2>nul
+    if errorlevel 1 (
+        echo Adding remote "origin"...
+        git remote add origin "%REPO_URL%"
+    )
+)
+echo.
+
+echo Staging files...
+git add -A
+
+git diff --cached --quiet
+if not errorlevel 1 (
+    echo No changes to upload.
+    echo.
+    pause
+    exit /b 0
+)
+
+set "COMMIT_MSG=Update dashboard - %date% %time%"
+echo Creating commit: %COMMIT_MSG%
+git commit -m "%COMMIT_MSG%"
+echo.
+
+echo Pushing to GitHub (%REPO_URL%)...
+git push -u origin %BRANCH%
+
+if errorlevel 1 (
+    echo.
+    echo Direct push failed - the remote repository probably already has
+    echo some content (e.g. a README created on GitHub). Trying to sync...
+    git pull origin %BRANCH% --allow-unrelated-histories --no-edit
+    if errorlevel 1 (
+        echo.
+        echo [ERROR] Sync failed. Check the messages above, fix any
+        echo conflicts manually, then run this script again.
+        pause
+        exit /b 1
+    )
+    echo Pushing again...
+    git push -u origin %BRANCH%
+    if errorlevel 1 (
+        echo.
+        echo [ERROR] Push failed again. You may need to sign in to GitHub
+        echo (a browser window should open for login) or resolve a
+        echo conflict manually.
+        pause
+        exit /b 1
+    )
+)
+
+echo.
+echo ================================================
+echo   Done! Check your changes at:
+echo   https://github.com/mike000123/World_Macro_Dashboard
+echo ================================================
+pause
