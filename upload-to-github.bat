@@ -38,17 +38,16 @@ echo Staging files...
 git add -A
 
 git diff --cached --quiet
-if not errorlevel 1 (
-    echo No changes to upload.
+if errorlevel 1 (
+    set "COMMIT_MSG=Update dashboard - %date% %time%"
+    echo Creating commit: !COMMIT_MSG!
+    git commit -m "!COMMIT_MSG!"
     echo.
-    pause
-    exit /b 0
+) else (
+    echo No new changes to commit - will still try to push any
+    echo existing local commits that have not reached GitHub yet.
+    echo.
 )
-
-set "COMMIT_MSG=Update dashboard - %date% %time%"
-echo Creating commit: %COMMIT_MSG%
-git commit -m "%COMMIT_MSG%"
-echo.
 
 echo Pushing to GitHub (%REPO_URL%)...
 git push -u origin %BRANCH%
@@ -69,9 +68,10 @@ if errorlevel 1 (
     git push -u origin %BRANCH%
     if errorlevel 1 (
         echo.
-        echo [ERROR] Push failed again. You may need to sign in to GitHub
-        echo (a browser window should open for login) or resolve a
-        echo conflict manually.
+        echo [ERROR] Push failed again. Scroll up in this window and read
+        echo the exact error text from git above this message - that is
+        echo what tells us what is wrong (login/auth issue, wrong repo
+        echo name, network problem, etc.).
         pause
         exit /b 1
     )
