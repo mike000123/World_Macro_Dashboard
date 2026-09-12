@@ -2093,7 +2093,7 @@ function ReerDeficitPanel() {
   const defDomain = merged.length ? pad(Math.min(...defVals), Math.max(...defVals)) : [-10, 30];
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         REER vs. εμπορικό έλλειμμα, ίδιο διάγραμμα (2 άξονες)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2137,7 +2137,7 @@ function GdpCheckPanel() {
   const sum = gdpCheckSum(gc, gy);
   return (
     <div style={{ background: "#0d111a", border: "1px solid #232b3d", borderRadius: 10, padding: "12px 14px", marginTop: 10, fontFamily: "system-ui, sans-serif" }}>
-      <div style={{ fontSize: 12, color: "#8b93ab", marginBottom: 6 }}>
+      <div style={{ fontSize: 12, color: "#eef1f7", marginBottom: 6 }}>
         Έλεγχος: C + I + G + NX έναντι 100% του ΑΕΠ (μόνο πραγματικά στοιχεία, καμία εκτίμηση)
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 8 }}>
@@ -2171,7 +2171,7 @@ function SavingsChart({ active }) {
   const shown = CS_COUNTRIES.filter(cc => active.includes(cc.key) && publicSavingsShare[cc.key]);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Ιδιωτική &amp; δημόσια αποταμίευση, % ΑΕΠ
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2238,7 +2238,7 @@ function InflationChart({ active }) {
 
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Πληθωρισμός — headline &amp; πυρήνας (%)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2312,7 +2312,7 @@ function CumulativePriceIndexChart({ active, baseYear }) {
   const maxYear = Math.max(...shown.flatMap(cc => series[cc.key].rows.map(r => r.year)), baseYear);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Σωρευτική άνοδος τιμών (επίπεδο τιμών) — δείκτης, έτος βάσης = 100
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2392,7 +2392,7 @@ function RealWageIndexChart({ active, baseYear }) {
   const pad = (yHi - yLo) * 0.1 || 5;
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Πραγματικός μισθός — πόσο άλλαξε η αγοραστική δύναμη σε σχέση με τις τιμές (έτος βάσης = 100)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2513,7 +2513,7 @@ function WageByAgeChart({ baseYear }) {
 
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Πραγματικός μισθός ανά ηλικιακή ομάδα (έτος βάσης = 100)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2616,7 +2616,7 @@ function RealRateGrowthChart({ active, activeCurves }) {
 
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         r − g: πραγματικό επιτόκιο vs. ανάπτυξη ΑΕΠ — ο κινητήρας της "χιονοστιβάδας" χρέους
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2734,7 +2734,7 @@ function DebtDecompositionChart({ active, activeCurves }) {
 
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Μεταβολή χρέους/ΑΕΠ και συνιστώσες: Δ(B/Y) = (r−g)·(B/Y)ₜ₋₁ + πρωτογενές έλλειμμα/Y
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2792,7 +2792,7 @@ function DebtChart({ active }) {
   const shown = CS_COUNTRIES.filter(cc => active.includes(cc.key) && debtToGdp[cc.key]);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Δημόσιο χρέος / ΑΕΠ, όσο πίσω επιτρέπουν τα δεδομένα ανά χώρα
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2834,7 +2834,7 @@ function fmtMonYear(d) {
 function MonetaryPolicyChart() {
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Μ0, Μ2 και ισολογισμός Fed — ετήσια % μεταβολή, ΗΠΑ (μόνο, προς το παρόν), 1965-2026
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2873,7 +2873,7 @@ const CUM_TICKS = [100, 300, 1000, 3000, 10000];
 function MonetaryCumulativeChart() {
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Σωρευτική μεταβολή Μ0 &amp; Μ2, ΗΠΑ — δείκτης, Νοέμβριος 1965 = 100
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2921,7 +2921,7 @@ function TreasuryAmountsChart({ active }) {
   const showJP = shown.some(cc => cc.key === "JP");
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Κάτοχοι ομολόγων — εγχώριοι έναντι υπολοίπου κόσμου, 1945–2026
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -2973,7 +2973,7 @@ function TreasuryForeignShareChart({ active }) {
   const seriesFor = { US: usSeries, JP: jpSeries };
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Μερίδιο υπολοίπου κόσμου στους κατόχους ομολόγων, 1945–2026
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3027,7 +3027,7 @@ function TreasuryCompositionChart({ active }) {
   });
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Σύνθεση κατόχων ομολόγων ΗΠΑ, 1945–2026 (κάθε έτος = 100%)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3073,7 +3073,7 @@ function ShareLineChart({ title, subtitle, data, domain, asPercent, asIndex, ind
   const shown = CS_COUNTRIES.filter(cc => active.includes(cc.key) && data[cc.key]);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>{title}</div>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>{title}</div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>{subtitle}</div>
       <ResponsiveContainer width="100%" height={height}>
         <LineChart syncId="macro-year" syncMethod="value" margin={{ top: 5, right: 15, left: 0, bottom: 0 }}>
@@ -3112,7 +3112,7 @@ function CurrentAccountDecompositionChart({ active }) {
   const shownCountries = CS_COUNTRIES.filter(cc => CA_DECOMP_COUNTRIES.includes(cc.key) && active.includes(cc.key));
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Ισοζύγιο τρεχουσών συναλλαγών ανά συνιστώσα, % ΑΕΠ
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3180,7 +3180,7 @@ function PressFreedomChart({ active }) {
   for (let y = 2013; y <= 2026; y++) years.push(y);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Δείκτης Ελευθερίας Τύπου (RSF), 2013-2026
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3246,7 +3246,7 @@ function GdpCumulativeChart({ active }) {
   const shown = CS_COUNTRIES.filter(cc => active.includes(cc.key) && series[cc.key]);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Συνολική μεταβολή πραγματικού ΑΕΠ — δείκτης, έτος βάσης = 100
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3307,7 +3307,7 @@ function HousePriceIndexChart({ active, baseYear }) {
   const shown = CS_COUNTRIES.filter(cc => active.includes(cc.key) && rebased[cc.key]);
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Πραγματικές τιμές κατοικίας — δείκτης, έτος βάσης = 100 (inflation-adjusted)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3393,7 +3393,7 @@ function HousingVsMedianWageChart({ active, baseYear }) {
   const pad = (yHi - yLo) * 0.1 || 5;
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Στέγαση vs. διάμεσος μισθός — προσιτότητα κατοικίας (έτος βάσης = 100)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3497,7 +3497,7 @@ function HousingByAgeChart({ baseYear }) {
 
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Στέγαση vs. μισθός ανά ηλικιακή ομάδα — προσιτότητα κατοικίας (έτος βάσης = 100)
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3564,11 +3564,73 @@ const SECTOR_COUNTRIES = CS_COUNTRIES.filter(cc => SECTOR_COUNTRY_KEYS.includes(
 const GVA_SECTOR_COUNTRY_KEYS = ["GR", "DE", "FR", "ES", "CY", "BG", "US"];
 const GVA_SECTOR_COUNTRIES = CS_COUNTRIES.filter(cc => GVA_SECTOR_COUNTRY_KEYS.includes(cc.key));
 
-function InvestmentBySectorChart() {
-  const [country, setCountry] = useState("GR");
-  const [activeSectors, setActiveSectors] = useState(SECTOR_DEFS.filter(s => !s.sub).map(s => s.key));
-  const toggleSector = (k) => setActiveSectors(a => a.includes(k) ? a.filter(x => x !== k) : [...a, k]);
+function ValueAddedBySectorBody({ country, activeSectors }) {
+  const rawData = gvaBySector[country];
+  const countryData = { ...rawData, M_N: {} };
+  const years = Object.keys(rawData.TOTAL).map(Number).sort((a, b) => a - b);
+  for (const y of years) countryData.M_N[y] = (rawData.M[y] || 0) + (rawData.N[y] || 0);
+  const minYear = years[0], maxYear = years[years.length - 1];
+  const tickStep = (maxYear - minYear) > 30 ? 10 : 5;
+  const ticks = [];
+  for (let y = Math.ceil(minYear / tickStep) * tickStep; y <= maxYear; y += tickStep) ticks.push(y);
+  if (!ticks.length || ticks[0] - minYear > tickStep / 2) ticks.unshift(minYear); else ticks[0] = minYear;
+  if (!ticks.length || maxYear - ticks[ticks.length - 1] > tickStep / 2) ticks.push(maxYear); else ticks[ticks.length - 1] = maxYear;
+  const shownSectors = SECTOR_DEFS.filter(s => activeSectors.includes(s.key));
+  const seriesBySector = {};
+  for (const s of shownSectors) {
+    seriesBySector[s.key] = years.map(y => ({
+      year: y,
+      v: (countryData[s.key][y] / countryData.TOTAL[y]) * 100,
+    }));
+  }
 
+  return (
+    <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
+        Συμβολή κλάδων στο ΑΕΠ — % της Ακαθάριστης Προστιθέμενης Αξίας (GVA)
+      </div>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
+        Eurostat nama_10_a64 (Gross value added, B1G, ανά κλάδο NACE Rev.2, τρέχουσες τιμές) για
+        GR/DE/FR/ES/CY/BG· BEA "Value Added by Industry" (τρέχουσες τιμές) για ΗΠΑ — αντιστοιχισμένο
+        σε ισοδύναμες κατηγορίες, επαληθευμένο ότι αθροίζει στο ΑΕΠ με διαφορά &lt;0.003%. Η ευρωπαϊκή
+        GVA είναι ≈96-97% του ΑΕΠ (η διαφορά είναι καθαροί φόροι προϊόντων)· η αμερικανική ήδη αθροίζει
+        ακριβώς στο ΑΕΠ — άρα "% επί GVA" εδώ ≈ "% του ΑΕΠ" σε όλες τις χώρες, σχεδόν ταυτόσημο για ΗΠΑ.
+        Χώρα &amp; κλάδοι επιλέγονται από τα κοινά κουμπιά παραπάνω (ίδια με το διάγραμμα επενδύσεων
+        δίπλα). ΣΗΜΕΙΩΣΗ: εδώ οι κλάδοι "Επαγγελματικές/επιστημονικές" (M) και "Διοικητική υποστήριξη"
+        (N) είναι στην πηγή ξεχωριστοί, μη-επικαλυπτόμενοι κλάδοι (σε αντίθεση με τις επενδύσεις όπου
+        είναι ήδη ενωμένοι σε M_N) — για να ταιριάζουν τα κοινά κουμπιά και στα δύο διαγράμματα, εδώ
+        αθροίζονται σε ένα ενιαίο "M_N" (πραγματική πρόσθεση δύο πραγματικών τιμών, όχι εκτίμηση)· η
+        υποκατηγορία "— εκ των οποίων Διοικητική υποστήριξη" παραμένει το πραγματικό N, ως υποσύνολο
+        του M_N. Η γκριζωπή "— εκ των οποίων Μεταποίηση/Εκπαίδευση" κατηγορία είναι υποσύνολο του
+        γονικού της κλάδου — περιλαμβάνεται ήδη μέσα του, μην την προσθέτεις. Σημείωση: η υπολογιστική
+        ενοικίαση ιδιοκατοικούμενων κατοικιών μπαίνει στο "Ακίνητα" (L), το ίδιο όπως και στις
+        επενδύσεις δίπλα.
+      </div>
+      <ResponsiveContainer width="100%" height={280}>
+        <LineChart syncId="macro-year" syncMethod="value" margin={{ top: 5, right: 15, left: 0, bottom: 0 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#262f42" />
+          <XAxis dataKey="year" type="number" domain={[minYear, maxYear]} tick={{ fontSize: 10, fill: "#9aa3ba" }}
+            ticks={ticks} allowDuplicatedCategory={false} />
+          <YAxis tick={{ fontSize: 10, fill: "#9aa3ba" }} width={38} domain={[0, "auto"]}
+            tickFormatter={(v) => `${Math.round(v)}%`} />
+          <Tooltip contentStyle={{ fontSize: 12, background: "#121722", border: "1px solid #262f42", borderRadius: 6 }} itemSorter={(item) => -item.value}
+            formatter={(v, n) => [`${v.toFixed(1)}%`, n]} labelFormatter={(l) => `Έτος ${l}`} />
+          {shownSectors.map(s => (
+            <Line key={s.key} data={seriesBySector[s.key]} dataKey="v" name={s.label} stroke={s.color}
+              strokeDasharray={s.sub ? "5 3" : "0"} dot={false} strokeWidth={2} isAnimationActive={false} />
+          ))}
+        </LineChart>
+      </ResponsiveContainer>
+      {shownSectors.length === 0 && (
+        <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", padding: "8px 0", textAlign: "center" }}>
+          Επίλεξε τουλάχιστον έναν κλάδο από τα κοινά κουμπιά παραπάνω.
+        </div>
+      )}
+    </div>
+  );
+}
+
+function InvestmentBySectorBody({ country, activeSectors }) {
   const countryData = investmentBySector[country];
   const years = Object.keys(countryData.TOTAL).map(Number).sort((a, b) => a - b);
   const minYear = years[0], maxYear = years[years.length - 1];
@@ -3587,7 +3649,7 @@ function InvestmentBySectorChart() {
   }
   return (
     <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
+      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 2 }}>
         Επενδύσεις ανά κλάδο οικονομικής δραστηριότητας — % του συνόλου επενδύσεων
       </div>
       <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
@@ -3601,31 +3663,7 @@ function InvestmentBySectorChart() {
         Βιομηχανία) — περιλαμβάνονται ήδη μέσα του, μην τις προσθέτεις. Σημείωση: η επένδυση σε κατοικίες
         (οικοδομή για ιδιοκατοίκηση) καταγράφεται στον κλάδο "Ακίνητα" (L) — σε ΗΠΑ και Ευρώπη το ίδιο —
         όχι στις "Κατασκευές" (F), που αφορά μόνο τον πάγιο εξοπλισμό των κατασκευαστικών επιχειρήσεων.
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 6 }}>
-        {SECTOR_COUNTRIES.map(c => (
-          <button key={c.key} onClick={() => setCountry(c.key)} className="pill"
-            style={{
-              fontFamily: "system-ui, sans-serif", fontSize: 11.5, padding: "4px 9px", borderRadius: 999,
-              border: `1.5px solid ${c.color}`, background: country === c.key ? c.color : "transparent",
-              color: country === c.key ? "#0a0e16" : c.color, fontWeight: 700, cursor: "pointer",
-            }}>
-            {c.label}
-          </button>
-        ))}
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
-        {SECTOR_DEFS.map(s => (
-          <button key={s.key} onClick={() => toggleSector(s.key)} className="pill"
-            style={{
-              fontFamily: "system-ui, sans-serif", fontSize: 11.5, padding: "4px 9px", borderRadius: 999,
-              border: `1.5px solid ${s.color}`, background: activeSectors.includes(s.key) ? s.color : "transparent",
-              color: activeSectors.includes(s.key) ? "#0a0e16" : s.color, fontWeight: 600, cursor: "pointer",
-              opacity: s.sub ? 0.85 : 1, fontStyle: s.sub ? "italic" : "normal",
-            }}>
-            {s.label}
-          </button>
-        ))}
+        Χώρα &amp; κλάδοι επιλέγονται από τα κοινά κουμπιά παραπάνω (ίδια με το διάγραμμα ΑΕΠ δίπλα).
       </div>
       <ResponsiveContainer width="100%" height={280}>
         <LineChart syncId="macro-year" syncMethod="value" margin={{ top: 5, right: 15, left: 0, bottom: 0 }}>
@@ -3644,99 +3682,65 @@ function InvestmentBySectorChart() {
       </ResponsiveContainer>
       {shownSectors.length === 0 && (
         <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", padding: "8px 0", textAlign: "center" }}>
-          Επίλεξε τουλάχιστον έναν κλάδο από τα κουμπιά παραπάνω.
+          Επίλεξε τουλάχιστον έναν κλάδο από τα κοινά κουμπιά παραπάνω.
         </div>
       )}
     </div>
   );
 }
 
-function ValueAddedBySectorChart() {
+// Ενιαία επιλογή χώρας/κλάδου για τα δύο διαγράμματα «ΑΕΠ ανά κλάδο (GVA)» και «Επενδύσεις ανά
+// κλάδο» — ζητήθηκε να ελέγχονται από τα ΙΔΙΑ κουμπιά αντί για δύο ξεχωριστά σετ. Τα δύο datasets
+// (gvaBySector/investmentBySector) καλύπτουν τις ίδιες 7 χώρες, οπότε η επιλογή χώρας είναι απόλυτα
+// κοινή. Οι κλάδοι έχουν μία μικρή ασυμμετρία στην πηγή (M/N ενωμένοι σε M_N μόνο στις επενδύσεις,
+// ξεχωριστοί στο GVA) — διορθώνεται μέσα στο ValueAddedBySectorBody αθροίζοντας πραγματικό M+N σε
+// M_N ώστε το ίδιο σετ κουμπιών (SECTOR_DEFS) να δουλεύει αμφίδρομα, χωρίς καμία εκτίμηση.
+function SectorActivityCharts() {
   const [country, setCountry] = useState("GR");
-  const [activeSectors, setActiveSectors] = useState(GVA_SECTOR_DEFS.filter(s => !s.sub).map(s => s.key));
+  const [activeSectors, setActiveSectors] = useState(SECTOR_DEFS.filter(s => !s.sub).map(s => s.key));
   const toggleSector = (k) => setActiveSectors(a => a.includes(k) ? a.filter(x => x !== k) : [...a, k]);
 
-  const countryData = gvaBySector[country];
-  const years = Object.keys(countryData.TOTAL).map(Number).sort((a, b) => a - b);
-  const minYear = years[0], maxYear = years[years.length - 1];
-  const tickStep = (maxYear - minYear) > 30 ? 10 : 5;
-  const ticks = [];
-  for (let y = Math.ceil(minYear / tickStep) * tickStep; y <= maxYear; y += tickStep) ticks.push(y);
-  if (!ticks.length || ticks[0] - minYear > tickStep / 2) ticks.unshift(minYear); else ticks[0] = minYear;
-  if (!ticks.length || maxYear - ticks[ticks.length - 1] > tickStep / 2) ticks.push(maxYear); else ticks[ticks.length - 1] = maxYear;
-  const shownSectors = GVA_SECTOR_DEFS.filter(s => activeSectors.includes(s.key));
-  const seriesBySector = {};
-  for (const s of shownSectors) {
-    seriesBySector[s.key] = years.map(y => ({
-      year: y,
-      v: (countryData[s.key][y] / countryData.TOTAL[y]) * 100,
-    }));
-  }
-
   return (
-    <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 6px", border: "1px solid #232b3d", marginTop: 10 }}>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#8b93ab", marginBottom: 2 }}>
-        Συμβολή κλάδων στο ΑΕΠ — % της Ακαθάριστης Προστιθέμενης Αξίας (GVA)
-      </div>
-      <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", marginBottom: 6, minHeight: 30 }}>
-        Eurostat nama_10_a64 (Gross value added, B1G, ανά κλάδο NACE Rev.2, τρέχουσες τιμές) για
-        GR/DE/FR/ES/CY/BG· BEA "Value Added by Industry" (τρέχουσες τιμές) για ΗΠΑ — αντιστοιχισμένο
-        σε ισοδύναμες κατηγορίες, επαληθευμένο ότι αθροίζει στο ΑΕΠ με διαφορά &lt;0.003%. Η ευρωπαϊκή
-        GVA είναι ≈96-97% του ΑΕΠ (η διαφορά είναι καθαροί φόροι προϊόντων)· η αμερικανική ήδη αθροίζει
-        ακριβώς στο ΑΕΠ — άρα "% επί GVA" εδώ ≈ "% του ΑΕΠ" σε όλες τις χώρες, σχεδόν ταυτόσημο για ΗΠΑ.
-        Επιλογή χώρας μόνο εδώ. Η γκριζωπή "— εκ των οποίων" κατηγορία είναι υποσύνολο του γονικού της
-        κλάδου (π.χ. Μεταποίηση ⊂ Βιομηχανία) — περιλαμβάνεται ήδη μέσα του, μην την προσθέτεις.
-        Σημείωση: η υπολογιστική ενοικίαση ιδιοκατοικούμενων κατοικιών μπαίνει στο "Ακίνητα" (L), το
-        ίδιο όπως και στις επενδύσεις παραπάνω.
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 6 }}>
-        {GVA_SECTOR_COUNTRIES.map(c => (
-          <button key={c.key} onClick={() => setCountry(c.key)} className="pill"
-            style={{
-              fontFamily: "system-ui, sans-serif", fontSize: 11.5, padding: "4px 9px", borderRadius: 999,
-              border: `1.5px solid ${c.color}`, background: country === c.key ? c.color : "transparent",
-              color: country === c.key ? "#0a0e16" : c.color, fontWeight: 700, cursor: "pointer",
-            }}>
-            {c.label}
-          </button>
-        ))}
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
-        {GVA_SECTOR_DEFS.map(s => (
-          <button key={s.key} onClick={() => toggleSector(s.key)} className="pill"
-            style={{
-              fontFamily: "system-ui, sans-serif", fontSize: 11.5, padding: "4px 9px", borderRadius: 999,
-              border: `1.5px solid ${s.color}`, background: activeSectors.includes(s.key) ? s.color : "transparent",
-              color: activeSectors.includes(s.key) ? "#0a0e16" : s.color, fontWeight: 600, cursor: "pointer",
-              opacity: s.sub ? 0.85 : 1, fontStyle: s.sub ? "italic" : "normal",
-            }}>
-            {s.label}
-          </button>
-        ))}
-      </div>
-      <ResponsiveContainer width="100%" height={280}>
-        <LineChart syncId="macro-year" syncMethod="value" margin={{ top: 5, right: 15, left: 0, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#262f42" />
-          <XAxis dataKey="year" type="number" domain={[minYear, maxYear]} tick={{ fontSize: 10, fill: "#9aa3ba" }}
-            ticks={ticks} allowDuplicatedCategory={false} />
-          <YAxis tick={{ fontSize: 10, fill: "#9aa3ba" }} width={38} domain={[0, "auto"]}
-            tickFormatter={(v) => `${Math.round(v)}%`} />
-          <Tooltip contentStyle={{ fontSize: 12, background: "#121722", border: "1px solid #262f42", borderRadius: 6 }} itemSorter={(item) => -item.value}
-            formatter={(v, n) => [`${v.toFixed(1)}%`, n]} labelFormatter={(l) => `Έτος ${l}`} />
-          {shownSectors.map(s => (
-            <Line key={s.key} data={seriesBySector[s.key]} dataKey="v" name={s.label} stroke={s.color}
-              strokeDasharray={s.sub ? "5 3" : "0"} dot={false} strokeWidth={2} isAnimationActive={false} />
-          ))}
-        </LineChart>
-      </ResponsiveContainer>
-      {shownSectors.length === 0 && (
-        <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 11.5, color: "#6b7385", padding: "8px 0", textAlign: "center" }}>
-          Επίλεξε τουλάχιστον έναν κλάδο από τα κουμπιά παραπάνω.
+    <div style={{ marginTop: 10 }}>
+      <div className="card-hover" style={{ background: "#121722", borderRadius: 12, padding: "12px 12px 10px", border: "1px solid #232b3d" }}>
+        <div style={{ fontFamily: "system-ui, sans-serif", fontSize: 12, color: "#eef1f7", marginBottom: 6 }}>
+          Κλάδος οικονομικής δραστηριότητας — κοινά κουμπιά χώρας/κλάδων και για τα δύο διαγράμματα παρακάτω (ΑΕΠ &amp; Επενδύσεις)
         </div>
-      )}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 6 }}>
+          {SECTOR_COUNTRIES.map(c => (
+            <button key={c.key} onClick={() => setCountry(c.key)} className="pill"
+              style={{
+                fontFamily: "system-ui, sans-serif", fontSize: 11.5, padding: "4px 9px", borderRadius: 999,
+                border: `1.5px solid ${c.color}`, background: country === c.key ? c.color : "transparent",
+                color: country === c.key ? "#0a0e16" : c.color, fontWeight: 700, cursor: "pointer",
+              }}>
+              {c.label}
+            </button>
+          ))}
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+          {SECTOR_DEFS.map(s => (
+            <button key={s.key} onClick={() => toggleSector(s.key)} className="pill"
+              style={{
+                fontFamily: "system-ui, sans-serif", fontSize: 11.5, padding: "4px 9px", borderRadius: 999,
+                border: `1.5px solid ${s.color}`, background: activeSectors.includes(s.key) ? s.color : "transparent",
+                color: activeSectors.includes(s.key) ? "#0a0e16" : s.color, fontWeight: 600, cursor: "pointer",
+                opacity: s.sub ? 0.85 : 1, fontStyle: s.sub ? "italic" : "normal",
+              }}>
+              {s.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="dash-grid-2" style={{ marginTop: 10 }}>
+        <ValueAddedBySectorBody country={country} activeSectors={activeSectors} />
+        <InvestmentBySectorBody country={country} activeSectors={activeSectors} />
+      </div>
     </div>
   );
 }
+
 
 function SteadyStatePanel({ country, color, label }) {
   const data = steadyStateData[country];
@@ -4834,8 +4838,6 @@ function Dashboard() {
         <GdpCumulativeChart active={activeShare} />
       </div>
 
-      <ValueAddedBySectorChart />
-
       {/* Fixed 2-column grid (not auto-fit) so the column count never depends on viewport width
           doing the rounding — and toggle-pill rows / labels live OUTSIDE any grid, so nothing
           ever orphans next to a blank cell the way the old single flowing grid did. */}
@@ -4849,7 +4851,7 @@ function Dashboard() {
           data={investmentShare} domain={[0, 0.5]} active={activeShare} />
       </div>
 
-      <InvestmentBySectorChart />
+      <SectorActivityCharts />
 
       <div className="dash-grid-2" style={{ marginTop: 10 }}>
         <SavingsChart active={activeShare} />
@@ -4862,11 +4864,11 @@ function Dashboard() {
           subtitle="csh_x + csh_m (PWT 11.0) για τις περισσότερες χώρες. Κύπρος 1995+: αντικαταστάθηκε με πραγματικά ονομαστικά στοιχεία Eurostat (το PWT έβγαζε ακραίες, αναξιόπιστες τιμές έως -76.6% εξαιτίας του ναυτιλιακού/offshore τομέα) — βλ. σχόλιο πηγής στον κώδικα. Κύπρος πριν το 1995: ακόμα PWT, μη επιβεβαιωμένο."
           data={netExportsShare} domain={[-0.3, 0.12]} xDomain={[1950, 2025]} active={activeShare} />
 
+        <GdpCheckPanel />
+
         <ShareLineChart title="Ισοζύγιο τρεχουσών συναλλαγών (% ΑΕΠ), 1955-2025"
           subtitle="ΗΠΑ/DE/FR/ES/GB/JP/GR: OECD μέσω FRED, ετήσιος μέσος όρος τριμηνιαίων στοιχείων. Κύπρος/Βουλγαρία: Eurostat (tipsbp20), ετήσια στοιχεία απευθείας. Προσθέτει στο εμπόριο αγαθών/υπηρεσιών και το καθαρό εισόδημα (τόκοι, μερίσματα) και τις μεταβιβάσεις — πιο αξιόπιστος δείκτης εξωτερικής ισορροπίας από τις καθαρές εξαγωγές μόνο (βλ. σχόλιο πηγής, με διασταυρωμένη επιβεβαίωση για Κύπρο)."
           data={currentAccountShare} domain={[-26, 12]} asPercent active={activeShare} />
-
-        <GdpCheckPanel />
 
         <ShareLineChart title="Οικονομικός Δείκτης Πολυπλοκότητας (ECI), 1995-2024"
           subtitle="Harvard Growth Lab, Atlas of Economic Complexity — eci_hs92 (ταξινόμηση προϊόντων HS92, μία μεθοδολογία σε όλη τη σειρά). Μετρά διαφοροποίηση/πολυπλοκότητα της εξαγωγικής βάσης — ΟΧΙ μέγεθος εξαγωγών. Ιαπωνία: #1 παγκοσμίως το 2024 (γνωστό, σταθερό εύρημα του Atlas)."
@@ -4876,7 +4878,11 @@ function Dashboard() {
 
       <CurrentAccountDecompositionChart active={activeShare} />
 
-      <div className="dash-grid-2" style={{ marginTop: 10 }}>
+      <div style={{ fontSize: 13.5, fontWeight: 700, color: "#eef1f7", margin: "22px 0 8px" }}>
+        Κοινωνικοί δείκτες με επίπτωση στην οικονομία
+      </div>
+
+      <div className="dash-grid-2">
         <ShareLineChart title="Δείκτης Αντίληψης Διαφθοράς (CPI), 2012-2024"
           subtitle="Transparency International, μέσω Our World in Data. Κλίμακα 0-100 (100 = καθόλου αντιληπτή διαφθορά). Ενιαία μεθοδολογία από το 2012 (η ΤΙ άλλαξε μέθοδο εκείνη τη χρονιά — πριν δεν συγκρίνεται)."
           data={corruptionPerceptionsIndex} domain={[30, 90]} asIndex indexDecimals={1}
