@@ -35,8 +35,9 @@ if not exist ".git" (
 echo.
 
 if exist "macro-dashboard.html" (
-    echo Refreshing index.html for GitHub Pages...
-    copy /Y "macro-dashboard.html" "index.html" >nul
+    echo Refreshing docs\index.html for GitHub Pages...
+    if not exist "docs" mkdir "docs"
+    copy /Y "macro-dashboard.html" "docs\index.html" >nul
 )
 echo.
 
@@ -88,5 +89,8 @@ echo.
 echo ================================================
 echo   Done! Check your changes at:
 echo   github.com/mike000123/World_Macro_Dashboard
+echo   Live site: mike000123.github.io/World_Macro_Dashboard
+echo   First time only: in GitHub repo Settings, Pages,
+echo   set Branch folder to /docs instead of / root
 echo ================================================
 pause

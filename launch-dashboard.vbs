@@ -9,6 +9,14 @@ Set WshShell = CreateObject("WScript.Shell")
 
 folder = fso.GetParentFolderName(WScript.ScriptFullName)
 
+' Kill any leftover dev server still listening on port 5173 from a previous
+' launch. Without this, clicking the shortcut again can leave the OLD server
+' running (it never got restarted) while a NEW one silently fails to bind to
+' the same port - your browser then keeps showing the old, stale version even
+' after files on disk have changed. This makes every launch start fresh.
+killCmd = "powershell -NoProfile -WindowStyle Hidden -Command ""Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }"""
+WshShell.Run killCmd, 0, True
+
 ' Window style 7 = minimized, without stealing focus or popping up
 WshShell.Run "cmd.exe /c cd /d """ & folder & """ && npm run dev", 0, False
 
